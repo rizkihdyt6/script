@@ -3,6 +3,7 @@
 Lred='\e[1;91m'
 Lgreen='\e[92m'
 Lyellow='\e[93m'
+YELLOW="\033[33m"
 green='\e[32m'
 RED='\033[0;31m'
 NC='\033[0m'
@@ -21,7 +22,7 @@ echo -e "$green.........................................................."$NC
 echo -e "$Lyellow               Autoscript Mod By Geo Project"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
 echo -e "$Lyellow                       @RizkiHdyt99"$NC
-echo -e "$Lyellow                       WhatsApp wa.me/085871027196"$NC
+echo -e "$Lyellow             WhatsApp wa.me/085871027196"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Tunggu 5 Saat!"$NC
@@ -58,11 +59,19 @@ VALIDITY() {
 }
 IZIN=$(curl https://raw.githubusercontent.com/rizkihdyt6/izinsc/main/ip | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermohonan diterima...\e[0m"
+echo -e "\e[32mPERMISSION ACCEPT...\e[0m"
     VALIDITY
 else
     echo -e "\e[31mPermohonan Ditolak!\e[0m"
-    echo -e "\e[31mTolong Contact Owner Script Untuk Pembelian @RizkiHdyt99 !\e[0m"
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "                PERMISSION DENIED ! "
+    echo -e "     Your VPS ${NC}( ${green}$IP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "         Buy access permissions for scripts "
+    echo -e "                 Contact Admin :"
+    echo -e "             ${green}Telegram t.me/RizkiHdyt99 "
+    echo -e "             WhatsApp wa.me/085871027196"
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
     rm -f main.sh
     exit 0
 fi

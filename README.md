@@ -1,10 +1,3 @@
-
-### PERHATIAN
-- Terima kasih untuk tidak menjual maupun mengenkripsi skrip ini. Saya mendapatkan secara gratis, jadi saya ataupun kalian harus berbagi secara gratis.
-- Script ini .
-- Status servis terkadang miss informasi. Dimana pada status dead tetapi jika dilihat by servis statusnya sudah aktif. Jadi bisa diabaikan
-- Jika mendapatkan error pada status servis dalam jangka panjang, bisa restart servis yang dead.
-
 ### INSTALL SCRIPT 
 <pre><code>apt install -y wget screen && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/rizkihdyt6/script/izin/main.sh && chmod +x main.sh && screen -S install ./main.sh</code></pre>
 
@@ -49,12 +42,3 @@
 - Always Use HTTPS : OFF
 - UNDER ATTACK MODE : OFF
 ```
-### STATUS
-`Beta Testing`
-
-### Lisensi
-Repository ini dilindungi oleh lisensi [PAK POLISI](https://mit-license.org/)
-
-### Credits
-- [Dharak36](https://github.com/dharak36/Xray-core)
-- [Tiarap](https://github.com/pengelana/blocklist)

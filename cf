@@ -4,13 +4,13 @@ green='\e[0;32m'
 NC='\e[0m'
 ns_domain_cloudflare1() {
 apt install jq curl -y
-DOMAIN=wunprem.me
+DOMAIN=rizkishope.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 echo $sub > /root/cfku
-SUB_DOMAIN=${sub}.wunprem.me
+SUB_DOMAIN=${sub}.rizkishope.my.id
 CF_ID=rizkihdyt6@gmail.com
 CF_KEY=15c999c8f900f4d36851f95d05f9c34b9130a
-echo "wunprem.me" > /root/domain
+echo "rizkishope.my.id" > /root/domain
 echo $SUB_DOMAIN > /root/domain
 
 set -euo pipefail
