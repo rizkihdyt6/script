@@ -22,7 +22,7 @@
           "decryption":"none",
             "clients": [
                {
-                 "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+                 "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #vless
              }
           ]
@@ -41,7 +41,7 @@
       "settings": {
             "clients": [
                {
-                 "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
+                 "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562",
                  "alterId": 0
 #vmess
              }
@@ -62,7 +62,7 @@
           "decryption":"none",
            "clients": [
               {
-                 "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+                 "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #trojanws
               }
           ],
@@ -83,7 +83,7 @@
            "clients": [
            {
            "method": "aes-128-gcm",
-          "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+          "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #ssws
            }
           ],
@@ -104,7 +104,7 @@
          "decryption":"none",
            "clients": [
              {
-               "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+               "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #vlessgrpc
              }
           ]
@@ -123,7 +123,7 @@
       "settings": {
             "clients": [
                {
-                 "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
+                 "id": "36326ea2-6994-4d53-bcd5-f43bbdaec562",
                  "alterId": 0
 #vmessgrpc
              }
@@ -144,7 +144,7 @@
           "decryption":"none",
              "clients": [
                {
-                 "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+                 "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #trojangrpc
                }
            ]
@@ -164,7 +164,7 @@
         "clients": [
           {
              "method": "aes-128-gcm",
-             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+             "password": "36326ea2-6994-4d53-bcd5-f43bbdaec562"
 #ssgrpc
            }
          ],
@@ -293,23 +293,22 @@
   },
   "dns": {
     "hosts": {
-      "dns.google": "8.8.8.8",
-      "dns.pub": "119.29.29.29",
-      "dns.alidns.com": "223.5.5.5",
+      "dns.tiarap": "174.138.21.128",
+      "dns.1host": "76.76.2.38",
       "geosite:category-ads-all": "127.0.0.1"
     },
     "servers": [
       {
-        "address": "https://1.1.1.1/dns-query",
+        "address": "https://doh.tiarap.org/dns-query",
         "domains": ["geosite:geolocation-!cn"],
         "expectIPs": ["geoip:!cn"]
       },
-      "8.8.8.8",
+      "174.138.21.128",
       {
-        "address": "114.114.114.114",
+        "address": "174.138.21.128",
         "port": 53,
-        "domains": ["geosite:cn", "geosite:category-games@cn"],
-        "expectIPs": ["geoip:cn"],
+        "domains": ["geosite:id", "geosite:category-games@id"],
+        "expectIPs": ["geoip:id"],
         "skipFallback": true
       },
       {
@@ -330,10 +329,10 @@
         "outboundTag": "Direct",
         "domain": [
           "geosite:private",
-          "geosite:apple-cn",
-          "geosite:google-cn",
-          "geosite:tld-cn",
-          "geosite:category-games@cn"
+          "geosite:apple-id",
+          "geosite:google-id",
+          "geosite:tld-id",
+          "geosite:category-games@id"
         ]
       },
       {
@@ -344,7 +343,7 @@
       {
         "type": "field",
         "outboundTag": "Direct",
-        "domain": ["geosite:cn"]
+        "domain": ["geosite:id"]
       },
       {
         "type": "field",
@@ -360,7 +359,7 @@
       "settings": {
         "port": 53,
         "network": "udp",
-        "address": "1.1.1.1"
+        "address": "174.138.21.128"
       },
       "tag": "dns-in",
       "listen": "127.0.0.1"
