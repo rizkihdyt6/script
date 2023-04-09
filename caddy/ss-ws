@@ -1,0 +1,27 @@
+cat >/etc/caddy/vmess <<-EOF
+
+@ws_path {
+
+path /worryfree
+
+path /xray
+
+path /yha
+
+path /vmess
+
+path /vless
+
+path /*
+
+}
+
+handle @ws_path {
+
+    uri path_regexp /.* /
+
+    reverse_proxy localhost:10003
+
+}
+
+EOF
