@@ -1,10 +1,10 @@
 #!/bin/sh
 REPOS="https://github.com/rizkihdyt6/script/raw/izin/"
 ns_domain_cloudflare() {
-	DOMAIN="rhdns.tech"
+	DOMAIN="rizkishope.my.id"
 	DOMAIN_PATH=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}."rhdns.tech"
+	SUB_DOMAIN=${SUB}."rizkishope.my.id"
 	NS_DOMAIN=dns.${SUB_DOMAIN}
 	CF_ID=rizkihdyt6@gmail.com
         CF_KEY=15c999c8f900f4d36851f95d05f9c34b9130a
@@ -58,10 +58,8 @@ setup_dnstt() {
 	mv * /etc/slowdns
 	wget -O /etc/systemd/system/client.service "${REPOS}slowdns/client" >/dev/null 2>&1
 	wget -O /etc/systemd/system/server.service "${REPOS}slowdns/server" >/dev/null 2>&1
-	wget -O /etc/xray/dns.json "${REPOS}slowdns/xraydns" >/dev/null 2>&1
 	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/client.service 
 	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/server.service 
-	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/xray/dns.json
 }
 ns_domain_cloudflare
 setup_dnstt
