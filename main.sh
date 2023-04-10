@@ -16,18 +16,32 @@ NC='\033[0;37m'
 # ===================
 echo ''
 clear
-echo ''           
-echo -e "$Lyellow                ⚡ PREMIUM SCRIPT ⚡"$NC
-echo -e "$green.........................................................."$NC
-echo -e "$Lyellow               Autoscript Mod By Geo Project"$NC
-echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @RizkiHdyt99"$NC
-echo -e "$Lyellow             WhatsApp wa.me/085871027196"$NC
-echo -e "$green.........................................................."$NC
-echo ''
-echo -e "$Lyellow                       Tunggu 5 Saat!"$NC
-echo -e "$green.........................................................."$NC
+echo -e "${YELLOW}----------------------------------------------------------${NC}"
+echo -e "  Welcome To NEWBIE Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "     This Will Quick Setup VPN Server On Your Server"
+echo -e "         Auther : ${green}RizkiHdyt | Muslihudin ${NC}${YELLOW}(${NC} ${green}NEWBIE PROJECT ${NC}${YELLOW})${NC}"
+echo -e "       © Recode By NEWBIE Project ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "${YELLOW}----------------------------------------------------------${NC}"
+echo ""
 sleep 5
+clear
+# // Checking Os Architecture
+if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
+    echo -e "${OK} Your Architecture Is Supported ( ${green}$( uname -m )${NC} )"
+else
+    echo -e "${EROR} Your Architecture Is Not Supported ( ${YELLOW}$( uname -m )${NC} )"
+    exit 1
+fi
+
+# // Checking System
+if [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "ubuntu" ]]; then
+    echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+elif [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "debian" ]]; then
+    echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+else
+    echo -e "${EROR} Your OS Is Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    exit 1
+fi
 clear
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
@@ -62,7 +76,6 @@ if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPERMISSION ACCEPT...\e[0m"
     VALIDITY
 else
-    echo -e "\e[31mPermohonan Ditolak!\e[0m"
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
     echo -e "     Your VPS ${NC}( ${green}$IP${NC} ) ${YELLOW}Has been Banned "
