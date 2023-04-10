@@ -22,7 +22,7 @@ echo -e "$green.........................................................."$NC
 echo -e "$Lyellow               Autoscript Mod By RizkiHdyt"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
 echo -e "$Lyellow                       @RizkiHdyt99"$NC
-echo -e "$Lyellow             WhatsApp wa.me/085871027196"$NC
+echo -e "$Lyellow                WhatsApp wa.me/085871027196"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Tunggu 5 Saat!"$NC
