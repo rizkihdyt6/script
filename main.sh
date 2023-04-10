@@ -16,13 +16,16 @@ NC='\033[0;37m'
 # ===================
 echo ''
 clear
+echo ''           
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To NEWBIE Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To NewBie Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e "     This Will Quick Setup VPN Server On Your Server"
-echo -e "         Auther : ${green}RizkiHdyt | Muslihudin ${NC}${YELLOW}(${NC} ${green}NEWBIE PROJECT ${NC}${YELLOW})${NC}"
-echo -e "       © Recode By NEWBIE Project ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "         Auther : ${green}RizkiHdyt ${NC}${YELLOW}(${NC} ${green}Geo Project ${NC}${YELLOW})${NC}"
+echo -e "       © Recode By Geo Project ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo ""
+echo "
+echo -e "$Lyellow                       Tunggu 5 Saat!"$NC
+echo -e "$green.........................................................."$NC
 sleep 5
 clear
 # // Checking Os Architecture
