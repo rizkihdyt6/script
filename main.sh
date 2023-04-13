@@ -8,6 +8,7 @@ green='\e[32m'
 RED='\033[0;31m'
 ERROR="${RED}[ERROR]${FONT}"
 NC='\033[0m'
+ISP=$(cat /etc/xray/isp)
 OK="${Green}--->${FONT}"
 BGBLUE='\e[1;44m'
 ORANGE='\033[0;33m'
@@ -63,7 +64,7 @@ VALIDITY() {
     else
        echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
-    echo -e "     Your VPS ${NC}( ${green}$IP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "     Your VPS ${NC}( ${green}$ISP${NC} ) ${YELLOW}Has been Banned "
     echo -e "         Buy access permissions for scripts "
     echo -e "                 Contact Admin :"
     echo -e "             ${green}Telegram t.me/RizkiHdyt99 "
