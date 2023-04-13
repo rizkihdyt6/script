@@ -6,7 +6,9 @@ Lyellow='\e[93m'
 YELLOW="\033[33m"
 green='\e[32m'
 RED='\033[0;31m'
+ERROR="${RED}[ERROR]${FONT}"
 NC='\033[0m'
+OK="${Green}--->${FONT}"
 BGBLUE='\e[1;44m'
 ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
@@ -37,53 +39,16 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-#IZIN SCRIPT
-MYIP=$(curl -s ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m"#!/bin/bash
-# Color Validation
-Lred='\e[1;91m'
-Lgreen='\e[92m'
-Lyellow='\e[93m'
-YELLOW="\033[33m"
-green='\e[32m'
-RED='\033[0;31m'
-NC='\033[0m'
-BGBLUE='\e[1;44m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-NC='\033[0;37m'
-# ===================
-echo ''
-clear
-echo ''           
-echo -e "$Lyellow                ⚡ IZIN SCRIPT NEWBIETUNNEL ⚡"$NC
-echo -e "$green.........................................................."$NC
-echo -e "$Lyellow               Autoscript Mod By RizkiHdyt"$NC
-echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @RizkiHdyt99"$NC
-echo -e "$Lyellow                WhatsApp wa.me/085871027196"$NC
-echo -e "$green.........................................................."$NC
-echo ''
-echo -e "$Lyellow                       Tunggu 5 Saat!"$NC
-echo -e "$green.........................................................."$NC
-sleep 5
-clear
-if [ "${EUID}" -ne 0 ]; then
-		echo "You need to run this script as root"
-		exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
-		exit 1
+if [[ $IP == "" ]]; then
+    echo -e "${EROR} IP Address ( ${YELLOW}Not Detected${NC} )"
+else
+    echo -e "${OK} IP Address ( ${green}$IP${NC} )"
 fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+ERROR="${RED}[ERROR]${FONT}"
+OK="${Green}--->${FONT}"
 #IZIN SCRIPT
 MYIP=$(curl -s ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -96,8 +61,14 @@ VALIDITY() {
         echo -e "\e[32mAUTOSCRIPT SUKSES..\e[0m"
         sleep 5
     else
-    echo -e "\e[31mScript Anda Telah Expired !!\e[0m";
-    echo -e "\e[31mTolong Renew Dengan Owner Script @RizkiHdyt99\e[0m"
+       echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "                PERMISSION DENIED ! "
+    echo -e "     Your VPS ${NC}( ${green}$IP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "         Buy access permissions for scripts "
+    echo -e "                 Contact Admin :"
+    echo -e "             ${green}Telegram t.me/RizkiHdyt99 "
+    echo -e "             WhatsApp wa.me/085871027196"
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     exit 0
     fi
 }
@@ -106,7 +77,6 @@ if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPERMISSION ACCEPT BOSS...\e[0m"
     VALIDITY
 else
-    echo -e "\e[31mPermohonan Ditolak!\e[0m"
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
     echo -e "     Your VPS ${NC}( ${green}$IP${NC} ) ${YELLOW}Has been Banned "
