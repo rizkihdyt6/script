@@ -6,10 +6,7 @@ Lyellow='\e[93m'
 YELLOW="\033[33m"
 green='\e[32m'
 RED='\033[0;31m'
-ERROR="${RED}[ERROR]${FONT}"
 NC='\033[0m'
-ISP=$(cat /etc/xray/isp)
-OK="${Green}--->${FONT}"
 BGBLUE='\e[1;44m'
 ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
@@ -48,8 +45,7 @@ fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-ERROR="${RED}[ERROR]${FONT}"
-OK="${Green}--->${FONT}"
+ISP=$(cat /etc/xray/isp)
 #IZIN SCRIPT
 MYIP=$(curl -s ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -80,7 +76,7 @@ echo -e "\e[32mPERMISSION ACCEPT BOSS...\e[0m"
 else
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
-    echo -e "     Your VPS ${NC}( ${green}$IP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "     Your VPS ${NC}( ${green}$ISP${NC} ) ${YELLOW}Has been Banned "
     echo -e "         Buy access permissions for scripts "
     echo -e "                 Contact Admin :"
     echo -e "             ${green}Telegram t.me/RizkiHdyt99 "
